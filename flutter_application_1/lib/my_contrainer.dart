@@ -6,6 +6,7 @@ class MyContrainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text(
           'Using Contrainer',
@@ -31,11 +32,19 @@ class MyContrainer extends StatelessWidget {
     decoration: BoxDecoration(
       color: Colors.white,
       border: Border.all(
-        color: Colors.black,
+        color: Colors.white,
         width: 2
       ),
       shape: BoxShape.rectangle,
-      borderRadius: const BorderRadius.all(Radius.elliptical(10, 10))
+      borderRadius: const BorderRadius.all(Radius.elliptical(10, 10)),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.5),
+          spreadRadius: 2,
+          blurRadius: 10,
+          offset: const Offset(3, 3)
+        )
+      ]
     ),
     //color: Colors.black87,
     child: const Center(
@@ -50,15 +59,23 @@ class MyContrainer extends StatelessWidget {
         decoration: BoxDecoration(
       color: Colors.white,
       border: Border.all(
-        color: Colors.black,
+        color: Colors.white,
         width: 2
       ),
       shape: BoxShape.rectangle,
-      borderRadius: const BorderRadius.all(Radius.elliptical(10, 10))
+      borderRadius: const BorderRadius.all(Radius.elliptical(10, 10)),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.5),
+          spreadRadius: 2,
+          blurRadius: 10,
+          offset: const Offset(3, 3)
+        )
+      ]
     ),
         //color: Colors.white,
         child: const Center(
-        child:  Text('I am Rich',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 25),
+        child:  Text('I am Rich',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 40),
         )
       ),
   );
